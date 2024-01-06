@@ -1,0 +1,287 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* по-умолчанию */
+}
+body {
+	line-height: 1;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+/* -------------------------------------------- */
+
+/* vertical-align выравнивает строчные и блочно-строчные объекты по вертикали.
+Значение:
+top - по верху;
+middle - по центру;
+bottom - по низу; */
+
+body {
+	font-size: 32px;
+	background-color: grey;
+}
+
+.block {
+	background-color: aquamarine;
+	padding: 10px;
+	margin: 15px;
+	border: 10px solid rgb(212, 0, 255);
+	border-right: 10px dashed rgb(212, 0, 255);
+	border-left: 10px dotted rgb(212, 0, 255);
+	border-width: 13px 15px 8px 23px;
+}
+
+.inline {
+	background-color: rgb(222, 215, 250);
+}
+
+/* .link {
+	background-color: #0fa543;
+	color: white;
+	padding: 10px;
+	border: 2px solid #0a682c;
+	border-radius: 10px;
+}
+
+.link:hover {
+	border: 2px solid transparent;
+	color: blue;
+} */
+
+/* 
+border
+Универсальное свойство border позволяет одновременно установить толщину, стиль, и цвет границы вокруг элемента 
+border: 1px solid #000 (размер стиль цвет)
+Основные стили: solid; dotted; dashed; double.
+
+Синтаксис общего свойства:
+border: толщин_линии стиль_линии цвет_линии; */
+
+.link {
+	color: green;
+	border-bottom: 1px solid;
+	display: inline-block;
+}
+
+.link:hover {
+	color: aqua;
+}
+
+/* 
+outline
+Универсальное свойство, одновременно устанавливающее цвет, стиль, и толщину внешней границы на всех четырех сторонах элемента. 
+В отличии от линии, задаваемой через border, свойство outline не влияет на положение блока и его ширину.
+Также нельзя задать параметры линии на отдельных сторонах элемента, outline применяется сразу ко всем четырем сторонам элемента*/
+
+.block1 {
+	background-color: rgb(51, 139, 110);
+	color: rgb(0, 0, 0);
+	width: 300px;
+	height: 300px;
+	margin: 20px;
+	padding: 10px;
+	border-radius: 50% 50% 48% 52% / 14% 13% 87% 86%;
+	overflow: hidden;
+}
+.block a {
+	color: white;
+}
+
+.block2 {
+	background-color: rgb(65, 131, 206);
+	color: rgb(0, 0, 0);
+	width: 200px;
+	height: 200px;
+	margin: 100px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 50% 50% 0 50%;
+}
+
+.inline1 {
+	background-color: rgb(148, 87, 206);
+	color: white;
+	outline: 5px solid black;
+}
+
+.block1:hover {
+	outline: 50px solid rgb(29, 209, 68);
+}
+
+/* 
+border-radius
+Устанавливает радиус скругления уголков блока.
+border-radius: 50%; -круг
+Можно использовать с overflow: hidden; */
+
+/* 
+box-shadow
+Добавляет тень к элементу.
+box-shadow: сдвиг_по_горизонтали сдвиг_по_вертикали размытость ширина тени
+ Можно добавить много теней. На тень влияет свойство border-radius.
+ Если нужна внутренняя тень, то пишем box-shadow: inset и дальше параметры как для обычной тени */
+
+.block3 {
+	background-color: rgb(125, 167, 214);
+	color: rgb(62, 119, 107);
+	width: 200px;
+	height: 200px;
+	margin: 100px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 82% 18% 82% 18% / 30% 75% 25% 70%;
+	box-shadow: 25px 25px;
+}
+
+.block4 {
+	background-color: rgb(125, 167, 214);
+	color: rgb(62, 119, 107);
+	width: 200px;
+	height: 200px;
+	margin: 100px;
+	padding: 10px;
+	font-size: 16px;
+	overflow: hidden;
+	border-radius: 82% 18% 82% 18% / 30% 75% 25% 70%;
+	box-shadow: 25px 25px 25px 10px #10e71b, -15px -15px 15px 15px red;
+}
+
+/* opacity
+Определяет уровень прозрачности элемента.
+Отличие opacity: 0; от display: none; в том, что блок не убирается из вёрстки, а только становится прозрачным. Т.е. занимаемое им место остается. Так же с прозрачными элементами все еще можно взаимодействовать. Например, кликать по ссылкам. */
+
+.block5 {
+	background-color: rgb(46, 87, 134);
+	color: rgb(134, 212, 196);
+	width: 200px;
+	height: 200px;
+	margin: 100px;
+	padding: 10px;
+	font-size: 16px;
+	opacity: 0.5;
+}
+
+/*
+visibility
+Предназначен для отображения или скрытия элемента.
+Отличие visibility: hidden; от display:none; в том что блок 
+не убирается из верстки а только скрывается, 
+то есть занимаемое им место остается.
+Отличие visibility: hidden; от opacity:0;
+ в том что блок скрывается и взаимодействовать с ним нельзя.
+*/
+
+.block6 {
+	background-color: rgb(46, 134, 127);
+	color: rgb(33, 32, 70);
+	width: 300px;
+	height: 400px;
+	margin: 100px;
+	padding: 10px;
+	padding-top: 50px;
+	font-size: 20px;
+	border-radius: 36% 64% 69% 31% / 11% 4% 96% 89%;
+	box-shadow: inset 5px 5px 55px 25px #bb4ce7, 5px 5px 55px 25px #54136d;
+}
+.domashka2 {
+	width: 500px;
+	height: 600px;
+	background-color: aqua;
+	overflow: hidden;
+	margin-left: 300px;
+}
+
+.domashka1 {
+	display: inline-block;
+	background-color: #10e71b;
+	width: 350px;
+	height: 300px;
+	margin-left: 250px;
+	margin-top: -100px;
+	overflow: auto;
+}
+
+.pic1 {
+	margin: -50px;
+}
+
+.block_krug {
+	width: 200px;
+	height: 200px;
+	font-size: 16px;
+	background-color: aquamarine;
+	margin-left: 35;
+}
+
+.block_krug {
+	margin: 30px;
+	border-radius: 50%;
+}
+
+.parag {
+	opacity: 0.5;
+}
+
+.span_1 {
+	display: inline-block;
+	border: 2px solid #54136d;
+	margin: 10px;
+}
+
+.block4_4 {
+	width: 400px;
+	height: 400px;
+	background-color: #ff0000;
+	margin: 25px;
+	border-top: 3px solid #ffffff;
+	border-left: 3px dotted white;
+	border-right: 3px dashed rgba(255, 255, 255, 1);
+	border-bottom: 3px double hsl(0, 0%, 100%);
+}
+
+.link_div {
+	margin: 15px;
+}
+
+.ahref {
+	font-size: 36;
+	color: #ffffff;
+	margin: 100px;
+	box-shadow: 10px 15px 10px 10px red, -10px -15px 10px 10px rgb(119, 0, 255);
+	background-color: red;
+}
